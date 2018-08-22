@@ -29,3 +29,8 @@ def login():
         ))
         return redirect(url_for('index'))
     return render_template('login.html', title='Sign In', form=form)
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html', title="Page not found"), 404
