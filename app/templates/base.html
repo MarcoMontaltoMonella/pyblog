@@ -52,3 +52,7 @@
         <p>&copy; mmmarco.com</p>
     </div>
 {% endblock %}
+{% block scripts %}
+    {{ super() }}
+    {{ moment.include_moment() }}
+{% endblock %}
